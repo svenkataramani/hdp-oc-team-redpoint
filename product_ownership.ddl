@@ -1,0 +1,23 @@
+resource_id         	bigint              	                    
+pf_id               	int                 	                    
+shopper_id          	string              	                    
+prodownclsncd       	string              	                    
+order_ts            	timestamp           	                    
+order_date          	date                	                    
+billing_status_name 	string              	                    
+free_product_flag   	int                 	                    
+auto_renewal_flag   	boolean             	                    
+mobile_purchase_flag	int                 	                    
+product_expiration_ts	timestamp           	                    
+product_expiration_date	date                	                    
+prev_renewal_ts     	timestamp           	                    
+prev_renewal_date   	date                	                    
+next_renewal_date   	string              	                    
+last_renewal_ts     	timestamp           	                    
+last_renewal_date   	date                	                    
+next_billing_ts     	timestamp           	                    
+next_billing_date   	date                	                    
+renewal_price_locked_flag	boolean             	                    
+locked_renewal_price_amt	double              	                    
+locked_renewal_price_currency_code	string   
+ 
