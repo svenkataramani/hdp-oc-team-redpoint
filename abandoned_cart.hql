@@ -9,7 +9,7 @@ SET hive.groupby.orderby.position.alias=TRUE;
 
 Use mktgplatformdb;
 
-INSERT OVERWRITE TABLE TABLE mktgplatformdb.abandoned_cart
+INSERT OVERWRITE TABLE mktgplatformdb.abandoned_cart
 SELECT DISTINCT
         vsid.shopperID AS shopper_id,
         vsid.visitDate AS visit_ts,

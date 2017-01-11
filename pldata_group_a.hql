@@ -6,27 +6,9 @@ SET hive.exec.dynamic.partition.mode=nonstrict;
 SET hive.exec.max.dynamic.partitions=100000;
 SET hive.exec.max.dynamic.partitions.pernode=100000;
 SET hive.groupby.orderby.position.alias=TRUE;
- -----------------
- CREATE EXTERNAL TABLE mktgplatformdb.pl_data_group_a(   
-PrivateLabelID                int,
-pl_name                       string,
-plv_site_url                  string,
-plv_support_url               string,
-plv_support_email             string,
-plv_secure_site_url           string,
-plv_notify_email_address      string,
-plv_receipt_bcc_address       string,
-plv_transfer_out_bcc_address  string,
-plv_support_phone             string,
-plv_mng_domains_url           string
-)
-    Stored as ORC
-LOCATION '/teams/mktgplatformdb/pl_data_group_a'
-;
  
- 
- 
- ------------------
+Use mktgplatformdb;  
+
  INSERT OVERWRITE TABLE mktgplatformdb.pl_data_group_a
  SELECT
      privatelabelid
@@ -45,5 +27,5 @@ LOCATION '/teams/mktgplatformdb/pl_data_group_a'
  GROUP BY privatelabelid
   ;
   
----------------------
+
 

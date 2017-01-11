@@ -8,7 +8,7 @@ SET hive.exec.max.dynamic.partitions.pernode=100000;
 SET hive.groupby.orderby.position.alias=TRUE;
 
 ------------------------------
-
+Insert OVERWRITE TABLE mktgplatformdb.shopper_outbound_calls
 SELECT
         TRIM(CAST(shopperid AS string)) AS shopper_id
         ,obc.DateStamp AS call_ts
@@ -26,10 +26,9 @@ SELECT
         callcenterreporting.rptdimc3taskdisposition_snap AS TD
             ON obc.c3taskdispositionid = td.c3taskdispositionid
     WHERE
-        obc.shopperid <> 0
-        
-     limit 10   
+        obc.shopperid <> 0 
         ;
+        
         
         
   
